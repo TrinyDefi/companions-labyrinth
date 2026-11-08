@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#08040f">
+<title>Companion Labyrinth - fan-made</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #08040f; overflow: hidden; touch-action: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+  /* #stage keeps the game inside phone notches/rounded corners; #fit is the box the game measures to fit itself into */
+  #stage { position: fixed; inset: 0; box-sizing: border-box; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+  #fit { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+  #game { display: block; touch-action: none; }
+</style>
+</head>
+<body>
+<div id="stage"><div id="fit"><canvas id="game"></canvas></div></div>
+<!-- Script order matters. You may ADD <script> tags for files you create just before game.js. Do not change anything else in this file. -->
+<script src="src/config.js"></script>
+<script src="src/polar-maze.js"></script>
+<script src="src/traps.js"></script>
+<script src="src/maze-renderer.js"></script>
+<script src="src/share.js"></script>
+<script src="src/game.js"></script>
+</body>
+</html>
